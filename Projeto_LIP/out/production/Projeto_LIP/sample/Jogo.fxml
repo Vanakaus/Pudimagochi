@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="540.0" prefWidth="860.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Jogo_Controller">
+   <children>
+      <ImageView fx:id="img_Bg" fitHeight="540.0" fitWidth="860.0" pickOnBounds="true" AnchorPane.leftAnchor="0.0">
+         <image>
+            <Image url="@img/Background/BG0.jpg" />
+         </image>
+      </ImageView>
+      <AnchorPane fx:id="acp_Criar" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="540.0" prefWidth="860.0" style="-fx-background-color: transparent;">
+         <children>
+            <ImageView fx:id="img_CRIAR_Pudi" fitHeight="1024.0" fitWidth="350.0" layoutX="270.0" layoutY="113.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/Pudim0/000000.png" />
+               </image>
+            </ImageView>
+            <TextField fx:id="txt_CRIAR_Nome" editable="false" layoutX="280.0" layoutY="119.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="300.0" promptText="Nome do Pudim" style="-fx-alignment: center; -fx-background-color: transparent; -fx-border-width: 2; -fx-border-style: hidden hidden solid; -fx-prompt-text-fill: #ffdbab; -fx-text-fill: #ffdbab;">
+               <font>
+                  <Font name="Cooper Black" size="18.0" />
+               </font>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </TextField>
+            <ImageView fx:id="img_STE_Pudi" fitHeight="100.0" fitWidth="512.0" layoutX="150.0" layoutY="263.0" onMouseClicked="#STE_Pudi" onMouseEntered="#Aumentar_STE_Pudi" onMouseExited="#Diminuir_STE_Pudi" onMousePressed="#Pressionar_STE_Pudi" onMouseReleased="#Soltar_STE_Pudi" pickOnBounds="true" preserveRatio="true" rotate="180.0">
+               <image>
+                  <Image url="@img/Seta.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="img_STD_Pudi" fitHeight="100.0" fitWidth="512.0" layoutX="620.0" layoutY="263.0" onMouseClicked="#STD_Pudi" onMouseEntered="#Aumentar_STD_Pudi" onMouseExited="#Diminuir_STD_Pudi" onMousePressed="#Pressionar_STD_Pudi" onMouseReleased="#Soltar_STD_Pudi" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/Seta.png" />
+               </image>
+            </ImageView>
+            <Label alignment="CENTER" layoutX="300.0" layoutY="445.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="70.0" prefWidth="270.0" text="Background" textAlignment="CENTER" textFill="#755738" wrapText="true">
+               <font>
+                  <Font name="Bauhaus 93" size="36.0" />
+               </font>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Label>
+            <ImageView fx:id="img_STE_BG" fitHeight="60.0" fitWidth="512.0" layoutX="240.0" layoutY="450.0" onMouseClicked="#STE_BG" onMouseEntered="#Aumentar_STE_BG" onMouseExited="#Diminuir_STE_BG" onMousePressed="#Pressionar_STE_BG" onMouseReleased="#Soltar_STE_BG" pickOnBounds="true" preserveRatio="true" rotate="180.0">
+               <image>
+                  <Image url="@img/Seta.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="img_STD_BG" fitHeight="60.0" fitWidth="512.0" layoutX="570.0" layoutY="450.0" onMouseClicked="#STD_BG" onMouseEntered="#Aumentar_STD_BG" onMouseExited="#Diminuir_STD_BG" onMousePressed="#Pressionar_STD_BG" onMouseReleased="#Soltar_STD_BG" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/Seta.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="btn_CRIAR_Criar" layoutX="15.0" layoutY="470.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#CRIAR_Criar" onMouseEntered="#Aumentar_Criar" onMouseExited="#Diminuir_Criar" onMousePressed="#Pressionar_Criar" onMouseReleased="#Soltar_Criar" prefHeight="45.0" prefWidth="175.0" style="-fx-background-radius: 20; -fx-background-color: #ce747e;" text="Criar Novo" textAlignment="CENTER" textFill="#dddddd">
+               <font>
+                  <Font name="Cooper Black" size="24.0" />
+               </font>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Button>
+            <Button fx:id="btn_CRIAR_Iniciar" layoutX="670.0" layoutY="470.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#CRIAR_Iniciar" onMouseEntered="#Aumentar_Iniciar" onMouseExited="#Diminuir_Iniciar" onMousePressed="#Pressionar_Iniciar" onMouseReleased="#Soltar_Iniciar" prefHeight="45.0" prefWidth="175.0" style="-fx-background-radius: 20; -fx-background-color: #ce747e;" text="Iniciar" textAlignment="CENTER" textFill="#dddddd">
+               <font>
+                  <Font name="Cooper Black" size="26.0" />
+               </font>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Button>
+            <Label fx:id="lbl_Titulo" alignment="CENTER" contentDisplay="CENTER" layoutX="150.0" layoutY="5.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="85.0" prefWidth="560.0" text="Crie um Pet novo" textAlignment="CENTER" textFill="#ce747e">
+               <font>
+                  <Font name="Bauhaus 93" size="72.0" />
+               </font>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Label>
+            <ImageView fx:id="img_Logout" disable="true" fitHeight="260.0" fitWidth="80.0" layoutX="15.0" layoutY="20.0" onMouseClicked="#Logout" onMouseEntered="#Aumentar_Logout" onMouseExited="#Diminuir_Logout" onMousePressed="#Pressionar_Logout" onMouseReleased="#Soltar_Logout" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@img/Logout.png" />
+               </image>
+            </ImageView>
+         </children></AnchorPane>
+      <AnchorPane fx:id="acp_Pudimagotchi" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="540.0" prefWidth="860.0" visible="false">
+         <children>
+            <ImageView fx:id="img_Pudi" fitHeight="1024.0" fitWidth="350.0" layoutX="340.0" layoutY="130.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/Pudim0/000000.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="70.0" fitWidth="350.0" layoutX="340.0" layoutY="10.0" opacity="0.9" pickOnBounds="true">
+               <image>
+                  <Image url="@img/Quadro.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="img_Bg3" fitHeight="540.0" fitWidth="860.0" opacity="0.7" pickOnBounds="true" visible="false">
+               <image>
+                  <Image url="@img/Preto.jpg" />
+               </image>
+            </ImageView>
+            <Label disable="true" layoutX="10.0" layoutY="10.0" text="Estatisticas" visible="false" />
+            <ImageView fx:id="img_Bg2" fitHeight="440.0" fitWidth="250.0" layoutX="10.0" layoutY="90.0" opacity="0.4" pickOnBounds="true">
+               <image>
+                  <Image url="@img/Preto.jpg" />
+               </image>
+            </ImageView>
+            <Label alignment="CENTER" layoutX="85.0" layoutY="110.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="170.0" text="Saúde" textAlignment="CENTER" textFill="#d9b37f">
+               <font>
+                  <Font name="Cooper Black" size="24.0" />
+               </font>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Label>
+            <ImageView fx:id="img_S_Saude" fitHeight="65.0" fitWidth="63.0" layoutX="20.0" layoutY="110.0" pickOnBounds="true">
+               <image>
+                  <Image url="@img/S_Saude.png" />
+               </image>
+            </ImageView>
+            <ProgressBar fx:id="pgb_S_Saude" layoutX="85.0" layoutY="145.0" prefHeight="30.0" prefWidth="165.0" progress="0.53" />
+            <Label alignment="CENTER" layoutX="85.0" layoutY="195.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="170.0" text="Fome" textFill="#d9b37f">
+               <font>
+                  <Font name="Cooper Black" size="24.0" />
+               </font>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Label>
+            <ImageView fx:id="img_S_Fome" fitHeight="65.0" fitWidth="60.0" layoutX="20.0" layoutY="195.0" pickOnBounds="true">
+               <image>
+                  <Image url="@img/S_Fome.png" />
+               </image>
+            </ImageView>
+            <ProgressBar fx:id="pgb_S_Fome" layoutX="85.0" layoutY="230.0" prefHeight="30.0" prefWidth="165.0" progress="0.53" />
+            <Label alignment="CENTER" layoutX="85.0" layoutY="280.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="170.0" text="Energia" textFill="#d9b37f">
+               <font>
+                  <Font name="Cooper Black" size="24.0" />
+               </font>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Label>
+            <ImageView fx:id="img_S_Energia" fitHeight="65.0" fitWidth="55.0" layoutX="20.0" layoutY="280.0" pickOnBounds="true">
+               <image>
+                  <Image url="@img/S_Energia.png" />
+               </image>
+            </ImageView>
+            <ProgressBar fx:id="pgb_S_Energia" layoutX="85.0" layoutY="315.0" prefHeight="30.0" prefWidth="165.0" progress="0.53" />
+            <Label alignment="CENTER" layoutX="85.0" layoutY="365.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="170.0" text="Felicidade" textFill="#d9b37f">
+               <font>
+                  <Font name="Cooper Black" size="24.0" />
+               </font>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Label>
+            <ImageView fx:id="img_S_brincar" fitHeight="65.0" fitWidth="60.0" layoutX="20.0" layoutY="365.0" pickOnBounds="true">
+               <image>
+                  <Image url="@img/S_Felicidade.png" />
+               </image>
+            </ImageView>
+            <ProgressBar fx:id="pgb_S_Felicidade" layoutX="85.0" layoutY="400.0" prefHeight="30.0" prefWidth="165.0" progress="0.53" />
+            <Label alignment="CENTER" layoutX="85.0" layoutY="450.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="170.0" text="Higiene" textFill="#d9b37f">
+               <font>
+                  <Font name="Cooper Black" size="24.0" />
+               </font>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Label>
+            <ImageView fx:id="img_S_Banheiro" fitHeight="65.0" fitWidth="60.0" layoutX="20.0" layoutY="450.0" pickOnBounds="true">
+               <image>
+                  <Image url="@img/S_Banheiro.png" />
+               </image>
+            </ImageView>
+            <ProgressBar fx:id="pgb_S_Higiene" layoutX="85.0" layoutY="485.0" prefHeight="30.0" prefWidth="165.0" progress="0.53" style="-fx-accent: #0000FF;" />
+            <Label disable="true" text="Icones" visible="false" />
+            <ImageView fx:id="img_A_Curar" fitHeight="100.0" fitWidth="100.0" layoutX="755.0" layoutY="10.0" onMouseClicked="#A_Curar" onMouseEntered="#Aumentar_cr" onMouseExited="#Diminuir_cr" onMousePressed="#Presionar_cr" onMouseReleased="#Soltar_cr" pickOnBounds="true">
+               <image>
+                  <Image url="@img/A_Curar.png" />
+               </image>
+               <effect>
+                  <DropShadow />
+               </effect>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <ImageView fx:id="img_A_Comida" fitHeight="80.0" fitWidth="100.0" layoutX="750.0" layoutY="120.0" onMouseClicked="#A_Comida" onMouseEntered="#Aumentar_cmd" onMouseExited="#Diminuir_cmd" onMousePressed="#Presionar_cmd" onMouseReleased="#Soltar_cmd" pickOnBounds="true">
+               <image>
+                  <Image url="@img/A_Comida.png" />
+               </image>
+               <effect>
+                  <DropShadow />
+               </effect>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <ImageView fx:id="img_A_Luz" fitHeight="100.0" fitWidth="100.0" layoutX="750.0" layoutY="215.0" onMouseClicked="#A_Luz" onMouseEntered="#Aumentar_luz" onMouseExited="#Diminuir_luz" onMousePressed="#Presionar_luz" onMouseReleased="#Soltar_luz" pickOnBounds="true">
+               <image>
+                  <Image url="@img/A_Luz.png" />
+               </image>
+               <effect>
+                  <DropShadow>
+                     <input>
+                        <DropShadow blurType="ONE_PASS_BOX" height="12.0" radius="5.5" spread="0.8" width="12.0" />
+                     </input>
+                  </DropShadow>
+               </effect>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <ImageView fx:id="img_A_Brincar" fitHeight="100.0" fitWidth="80.0" layoutX="760.0" layoutY="330.0" onMouseClicked="#A_Brincar" onMouseEntered="#Aumentar_bnc" onMouseExited="#Diminuir_bnc" onMousePressed="#Presionar_bnc" onMouseReleased="#Soltar_bnc" pickOnBounds="true">
+               <image>
+                  <Image url="@img/A_Brincar.png" />
+               </image>
+               <effect>
+                  <DropShadow>
+                     <input>
+                        <DropShadow blurType="ONE_PASS_BOX" height="12.0" radius="5.5" spread="0.8" width="12.0" />
+                     </input>
+                  </DropShadow>
+               </effect>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <ImageView fx:id="img_A_Banheiro" fitHeight="80.0" fitWidth="100.0" layoutX="750.0" layoutY="445.0" onMouseClicked="#A_Banheiro" onMouseEntered="#Aumentar_bnh" onMouseExited="#Diminuir_bnh" onMousePressed="#Presionar_bnh" onMouseReleased="#Soltar_bnh" pickOnBounds="true">
+               <image>
+                  <Image url="@img/A_Banheiro.png" />
+               </image>
+               <effect>
+                  <DropShadow>
+                     <input>
+                        <DropShadow blurType="ONE_PASS_BOX" height="12.0" radius="5.5" spread="0.8" width="12.0" />
+                     </input>
+                  </DropShadow>
+               </effect>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <ImageView fx:id="img_Salvar" fitHeight="225.0" fitWidth="80.0" layoutX="120.0" onMouseClicked="#Salvar" onMouseEntered="#Aumentar_Salvar" onMouseExited="#Diminuir_Salvar" onMousePressed="#Presionar_Salvar" onMouseReleased="#Soltar_Salvar" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/Salvar.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="img_Sair" fitHeight="225.0" fitWidth="80.0" layoutX="20.0" onMouseClicked="#Sair" onMouseEntered="#Aumentar_Sair" onMouseExited="#Diminuir_Sair" onMousePressed="#Presionar_Sair" onMouseReleased="#Soltar_Sair" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/Voltar.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="lbl_Pudimagotchi" alignment="CENTER" layoutX="340.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="70.0" prefWidth="350.0" text="Pudimagotchi" textAlignment="CENTER" textFill="#ffdbab" wrapText="true">
+               <font>
+                  <Font name="Bauhaus 93" size="36.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
